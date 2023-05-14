@@ -1,645 +1,913 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 body {
-    font-family: "Poppins", sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
 }
 img {
-    width: 100%;
-    height: 100%;
-    display: block;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }
 .container {
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 .header {
-    display: flex;
-    margin: 23px auto;
+  display: flex;
+  margin: 23px auto;
 }
 .header .logo {
-    width: 90px;
-    margin-right: 40px;
+  width: 90px;
+  margin-right: 40px;
 }
 .header .menu ul {
-    display: flex;
+  display: flex;
 }
 
 .header .menu ul li {
-    padding: auto;
-    position: relative;
+  padding: auto;
+  position: relative;
 }
 
 .header .menu > ul > li > a {
-    color: rgb(0, 0, 0);
-    margin-right: 30px;
-    font-size: 14px;
-    transition: 0.5s;
-    padding: 20px 0;
+  color: rgb(0, 0, 0);
+  margin-right: 30px;
+  font-size: 14px;
+  transition: 0.5s;
+  padding: 20px 0;
 }
 
 .header .menu > ul > li:hover > a {
-    color: rgb(2, 114, 2);
+  color: rgb(2, 114, 2);
 }
 
 .header .menu > ul > li > .submenu {
-    position: absolute;
-    display: block;
-    width: 180px;
-    top: 60px;
-    padding: 20px 5px;
-    z-index: 1;
-    box-shadow: rgba(100, 100, 111, 0.134) 0px 3px 10px 0px;
-    opacity: 0;
-    transition: 0.5s;
+  position: absolute;
+  display: block;
+  width: 180px;
+  top: 60px;
+  padding: 20px 5px;
+  z-index: 1;
+  box-shadow: rgba(100, 100, 111, 0.134) 0px 3px 10px 0px;
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .header .menu > ul > li:hover .submenu {
-    opacity: 1;
-    top: 51px;
-    background-color: white;
+  opacity: 1;
+  top: 51px;
+  background-color: white;
 }
 
 .header .menu ul li .submenu li {
-    padding: 4px 15px;
-    font-size: 14px;
+  padding: 4px 15px;
+  font-size: 14px;
 }
 
 .header .menu > ul > li > .submenu > li a {
-    transition: 0.5s;
-    font-size: 14px;
+  transition: 0.5s;
+  font-size: 14px;
 }
 
 .header .menu > ul > li > .submenu li:hover a {
-    padding-left: 5px;
-    color: rgb(2, 114, 2);
+  padding-left: 5px;
+  color: rgb(2, 114, 2);
 }
 
 .header .icon {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .header .icon i {
-    color: black;
-    margin-left: 20px;
-    transition: 0.8s;
+  color: black;
+  margin-left: 20px;
+  transition: 0.8s;
 }
 .header .icon i:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.header .menubar {
+  display: none;
 }
 
 .banner {
-    position: relative;
+  position: relative;
 }
 .banner .content {
-    position: absolute;
-    text-align: center;
-    width: 45%;
-    top: 25%;
-    padding: 60px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 40%;
 }
 .banner .content p {
-    font-size: 20px;
-    font-weight: 200;
+  font-size: 20px;
+  font-weight: 200;
+  animation: anibanner 1.5s;
 }
 .banner .content h1 {
-    font-size: 50px;
-    font-weight: 500;
-    margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  animation: anibanner2 1.5s;
 }
 .banner .content h1 span {
-    color: rgb(2, 114, 2);
+  color: rgb(2, 114, 2);
 }
+.banner .content .discover {
+  animation: anibanner2 1.5s;
+}
+
 .banner .content a {
-    font-size: 16px;
-    font-weight: 300;
-    border: 1px solid rgb(123, 123, 123);
-    padding: 10px 15px;
-    position: relative;
-    transition: 0.5s;
+  font-size: 16px;
+  font-weight: 300;
+  border: 1px solid rgb(123, 123, 123);
+  padding: 10px 15px;
+  position: relative;
+  transition: 0.5s;
 }
 .banner .content a:hover {
-    color: white;
-    z-index: 1;
+  color: white;
+  z-index: 1;
 }
 .banner .content a::before {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 100%;
-    background-color: rgb(2, 114, 2);
-    color: white;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: 0.5s;
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(2, 114, 2);
+  color: white;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.5s;
 }
 .banner .content a:hover::before {
-    width: 101%;
+  width: 101%;
 }
+
+@keyframes anibanner {
+  from {
+    opacity: 0;
+    transform: translateY(50px) rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
+@keyframes anibanner2 {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .list1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 30px 0px;
+}
+
+.list1 .list {
+  padding: 0 30px;
+  text-align: center;
+  width: 16.6%;
+}
+
+.list1 .list img {
+  border-radius: 50%;
+  text-align: center;
+}
+
+/* .list1 {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin: 25px 0;
-    padding: 0;
+    margin: 30px 0;
+}
+.list1 .list {
+    display: block;
+    width: 16.66%;
+    padding: 0px 30px;
+    text-align: center;
 }
 .list1 .list img {
     border-radius: 50%;
     margin-bottom: 10px;
     transition: 0.5s;
-}
+    align-items: center;
+    width: 80%; */
+
 .list1 .list a {
-    padding: 10px 0;
-    margin: 0;
-    display: inline-block;
+  padding: 10px 0;
+  margin: 0;
+  display: inline-block;
 }
 .list1 .list a::after {
-    content: "";
-    display: block;
-    width: 0%;
-    height: 2px;
-    background-color: rgb(2, 114, 2);
-    margin-top: 10px;
-    transition: 0.5s;
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(2, 114, 2);
+  margin-top: 10px;
+  transition: 0.5s;
 }
 .list1 .list:hover a::after {
-    width: 100%;
+  width: 100%;
 }
 .list1 .list:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .popular {
-    text-align: center;
-    margin: 40px;
+  text-align: center;
+  margin: 40px;
 }
 
 .popular h1 {
-    font-size: 35px;
-    font-weight: 400;
-    padding: 0;
-    margin-top: 40px;
+  font-size: 35px;
+  font-weight: 400;
+  padding: 0;
+  margin-top: 40px;
 }
 .popular p {
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.374);
-    margin: 25px auto;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.374);
+  margin: 25px auto;
 }
 
 .popular a {
-    font-size: 15px;
-    font-weight: 300;
-    border: 1px solid rgba(0, 0, 0, 0.374);
-    padding: 10px 15px;
-    transition: 0.5s;
-    position: relative;
+  font-size: 15px;
+  font-weight: 300;
+  border: 1px solid rgba(0, 0, 0, 0.374);
+  padding: 10px 15px;
+  transition: 0.5s;
+  position: relative;
 }
 
 .popular a:hover {
-    color: white;
+  color: white;
 }
 
 .popular a::before {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgb(2, 114, 2);
-    transition: 0.5s;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(2, 114, 2);
+  transition: 0.5s;
+  z-index: -1;
 }
 
 .popular a:hover::before {
-    width: 100%;
+  width: 100%;
 }
 
 .content1 {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .content1 .card {
-    width: 25%;
-    padding: 0 15px;
-    margin-bottom: 50px;
-    transition: 0.5s;
+  width: 25%;
+  padding: 0 15px;
+  margin-bottom: 50px;
+  transition: 0.5s;
 }
 .content1 .card .thumb {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 .content1 .card:hover a {
-    color: rgb(2, 114, 2);
+  color: rgb(2, 114, 2);
 }
 .content1 .card .thumb::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: -100%;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.551);
-    transition: 0.5s;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.551);
+  transition: 0.5s;
 }
 .content1 .card:hover .thumb::before {
-    top: 0%;
+  top: 0%;
 }
 .content1 .card .thumb p {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgb(2, 114, 2);
-    color: white;
-    font-size: 14px;
-    padding: 5px 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgb(2, 114, 2);
+  color: white;
+  font-size: 14px;
+  padding: 5px 10px;
 }
 .content1 .card a {
-    font-size: 16px;
-    font-weight: 500;
-    transition: 0.5s;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.5s;
 }
 .content1 .card .price p {
-    display: inline-block;
-    margin-top: 10px;
+  display: inline-block;
+  margin-top: 10px;
 }
 .content1 .card .price .discount {
-    color: rgba(128, 128, 128, 0.708);
-    text-decoration: line-through;
-    font-size: 14px;
+  color: rgba(128, 128, 128, 0.708);
+  text-decoration: line-through;
+  font-size: 14px;
 }
 .content1 .card .sale {
-    text-decoration: none;
-    color: red;
-    font-size: 14px;
-    font-weight: 500;
+  text-decoration: none;
+  color: red;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .banner2 {
-    background-image: url(img/banner-2.jpg);
-    background-size: cover;
-    padding: 50px 0px;
-    text-align: center;
-    color: white;
-    position: relative;
+  background-image: url(img/banner-2.jpg);
+  background-size: cover;
+  padding: 50px 0px;
+  text-align: center;
+  color: white;
+  position: relative;
 }
 .banner2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.436);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.436);
 }
 
 .banner2 .more {
-    width: 40px;
-    height: 40px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    background-color: white;
-    color: black;
-    border-radius: 50%;
-    margin: auto;
-    position: relative;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
 }
 .banner2 .more::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: -1;
-    left: -1;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.429);
-    animation: animore 1s infinite linear alternate;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -1;
+  left: -1;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.429);
+  animation: animore 1s infinite linear alternate;
 }
 @keyframes animore {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1.5);
-    }
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1.5);
+  }
 }
 .banner2 .more1 {
-    display: inline-flex;
-    position: relative;
+  display: inline-flex;
+  position: relative;
 }
 .banner2 .more1 .hover1 {
-    width: 130px;
-    height: 150px;
-    background-color: white;
-    position: absolute;
-    left: 60px;
-    z-index: 1;
-    opacity: 0;
-    transition: 0.5s;
+  width: 130px;
+  height: 150px;
+  background-color: white;
+  position: absolute;
+  left: 60px;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
 }
 .banner2 .more1:hover .hover1 {
-    opacity: 1;
+  opacity: 1;
 }
 
 .banner2 .more1 .hover1 img {
-    padding: 10px;
+  padding: 10px;
 }
 .banner2 .more1 .hover1 p {
-    color: black;
-    background-color: white;
-    padding-bottom: 5px;
-    font-size: 16px;
-    font-weight: 400;
+  color: black;
+  background-color: white;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .banner2 .content {
-    position: relative;
+  position: relative;
 }
 
 .banner2 .content h2 {
-    color: white;
-    margin: 20px auto;
-    font-size: 34px;
-    font-weight: 600;
+  color: white;
+  margin: 20px auto;
+  font-size: 34px;
+  font-weight: 600;
 }
 .banner2 .content p {
-    color: white;
-    margin: 20px auto;
-    font-size: 16px;
-    font-weight: 200;
-    width: 50%;
+  color: white;
+  margin: 20px auto;
+  font-size: 16px;
+  font-weight: 200;
+  width: 50%;
 }
 .banner2 .content a {
-    color: white;
-    border: 1px solid white;
-    padding: 10px 20px;
-    position: relative;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  position: relative;
 }
 .banner2 .content a:hover {
-    z-index: 0;
+  z-index: 0;
 }
 
 .banner2 .content a::before {
-    content: "";
-    width: 0%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgb(2, 114, 2);
-    position: absolute;
-    z-index: -1;
-    transition: 0.5s;
+  content: "";
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(2, 114, 2);
+  position: absolute;
+  z-index: -1;
+  transition: 0.5s;
 }
 .banner2 .content a:hover::before {
-    width: 100%;
+  width: 100%;
 }
 .banner3 {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 30px -20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px -20px;
 }
 .banner3 .hoverproduct {
-    width: 33.33%;
-    padding: 0 20px;
-    position: relative;
+  width: 33.33%;
+  padding: 0 20px;
+  position: relative;
 }
 
 .banner3 .hoverproduct a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(0, 0, 0);
-    background-color: white;
-    width: 80%;
-    height: 60px;
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 20px;
-    font-weight: 600;
-    transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  width: 80%;
+  height: 60px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.5s;
 }
 
 .banner3 .hoverproduct:hover a {
-    color: white;
-    background-color: rgb(2, 114, 2);
-    bottom: 40px;
+  color: white;
+  background-color: rgb(2, 114, 2);
+  bottom: 40px;
 }
 
 .quote {
-    display: flex;
-    margin: 70px auto;
+  display: flex;
+  margin: 70px auto;
 }
 .quote .left {
-    width: 50%;
-    height: 700px;
-    position: relative;
+  height: 500px;
+  position: relative;
 }
 
 .quote .left .round {
-    width: 150px;
-    position: absolute;
-    top: -30px;
-    left: 40px;
-    animation: round1 5s infinite linear;
+  width: 130px;
+  position: absolute;
+  top: -30px;
+  left: 40px;
+  animation: round1 5s infinite linear;
 }
 @keyframes round1 {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .quote .right {
-    text-align: center;
-    margin: auto;
-    width: 50%;
+  text-align: center;
+  margin: auto;
+  width: 50%;
 }
 .quote .right .icon1 {
-    color: rgb(2, 114, 2);
-    font-size: 70px;
+  color: rgb(2, 114, 2);
+  font-size: 70px;
 }
 .quote .right .star {
-    color: rgb(248, 181, 81);
-    margin-right: 5px;
-    margin-bottom: 20px;
-    font-size: 20px;
+  color: rgb(248, 181, 81);
+  margin-right: 5px;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 .quote .right .star span {
-    color: rgba(203, 203, 203, 0.61);
+  color: rgba(203, 203, 203, 0.61);
 }
 .quote .right h3 {
-    width: 80%;
-    margin: auto;
-    font-size: 30px;
-    font-weight: 300;
-    color: black;
+  width: 80%;
+  margin: auto;
+  font-size: 30px;
+  font-weight: 300;
+  color: black;
 }
 .quote .right p {
-    margin: 20px auto;
-    font-size: 30px;
-    font-weight: 400;
+  margin: 20px auto;
+  font-size: 30px;
+  font-weight: 400;
 }
 .product {
-    display: flex;
-    justify-content: space-between;
-    margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px auto;
 }
 .product .proright {
-    width: 50%;
+  width: 50%;
 }
 
 .product .proright .up1 {
-    display: flex;
+  display: flex;
 }
 .product .proright .up2 {
-    display: flex;
+  display: flex;
 }
 
 .product .proright .right {
-    margin: 0 0 10px 10px;
-    position: relative;
+  margin: 0 0 10px 10px;
+  position: relative;
 }
 .product .proright i {
-    position: absolute;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    color: white;
-    font-size: 50px;
-    opacity: 0;
-    transition: 0.5s;
+  position: absolute;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  color: white;
+  font-size: 50px;
+  opacity: 0;
+  transition: 0.5s;
 }
 .product .proright .right:hover i {
-    opacity: 1;
+  opacity: 1;
 }
 
 .product .proright .right:hover .back::before {
-    opacity: 1;
+  opacity: 1;
 }
 .product .proright .back::before {
-    content: "";
-    display: block;
-    height: 100%;
-    top: 0;
-    left: 0;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.438);
-    opacity: 0;
-    transition: 0.5s;
+  content: "";
+  display: block;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.438);
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .product .proleft {
-    width: 50%;
-    position: relative;
-    margin-bottom: 20px;
-    margin-right: 10px;
+  width: 50%;
+  position: relative;
+  margin-bottom: 20px;
+  margin-right: 10px;
 }
 .product .proleft .back {
-    position: relative;
+  position: relative;
 }
 .product .proleft .back::before {
-    content: "";
-    display: block;
-    height: 100%;
-    top: 0;
-    left: 0;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.438);
-    opacity: 0;
-    transition: 0.5s;
+  content: "";
+  display: block;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.438);
+  opacity: 0;
+  transition: 0.5s;
 }
 .product .proleft i {
-    position: absolute;
-    display: flex;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-    width: calc(100% - 20px);
-    color: white;
-    font-size: 50px;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: 0.5s;
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: calc(100% - 20px);
+  color: white;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
 }
 .product .proleft:hover .back::before {
-    opacity: 1;
+  opacity: 1;
 }
 .product .proleft:hover i {
-    opacity: 1;
+  opacity: 1;
 }
 
-.footer .up {
-    display: flex;
-    align-items: center;
+.footer1 {
+  border-top: 1px solid rgba(128, 128, 128, 0.301);
+  padding-top: 50px;
 }
-.footer .up .logo1 {
-    width: 20%;
-    margin-right: 20px;
-}
-.footer .up .logo1 img {
-    width: 60%;
-    padding: 0 20px 20px 0;
-}
-.footer .up .content {
-    width: 50%;
-    padding: 10px 40px;
-    border-right: 1px solid rgba(128, 128, 128, 0.301);
-    border-left: 1px solid rgba(128, 128, 128, 0.301);
+.footer1 .up1 {
+  padding: 40px 0;
 }
 
-.footer .up .content h3 {
-    font-size: 20px;
-    font-weight: 400;
+.footer1 .up1 .footer {
+  display: block;
+}
+.footer1 .up1 .footer .logo1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer1 .up1 .footer .logo1 img {
+  width: 200px;
+}
+.footer1 .up1 .footer .content {
+  width: 100%;
+  text-align: center;
+  border: none;
+  margin: 15px 0;
+}
+.footer1 .up1 .footer .content h3 {
+  margin-bottom: 10px;
+}
+.footer1 .up1 .footer .social {
+  width: 100%;
+}
+.footer1 .up1 .footer .social ul {
+  justify-content: center;
+}
+
+.footer1 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer1 .footer .logo1 {
+  width: 20%;
+}
+.footer1 .footer .logo1 img {
+  width: 60%;
+  padding: 0 20px 20px 0;
+}
+.footer1 .footer .content {
+  width: 50%;
+  padding: 10px 40px;
+  border-right: 1px solid rgba(128, 128, 128, 0.301);
+  border-left: 1px solid rgba(128, 128, 128, 0.301);
+}
+
+.footer1 .footer .content h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.footer1 .footer .content p {
+  font-size: 18p6;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.767);
+}
+
+.footer1 .footer .social {
+  width: 25%;
+  text-align: right;
+}
+.footer1 .footer .social ul {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.footer1 .footer .social ul li a {
+  display: block;
+  border-radius: 50%;
+  margin-left: 7px;
+  width: 50px;
+  height: 50px;
+  line-height: 49px;
+  font-size: 16px;
+  text-align: center;
+  color: rgb(2, 114, 2);
+  background-color: rgba(189, 189, 189, 0.13);
+  transition: 0.5s;
+}
+
+.footer1 .footer .social ul li a:hover {
+  background-color: rgb(2, 114, 2);
+  color: white;
+}
+.footer1 .footer .social .text input {
+  border: none;
+  margin-right: 20px;
+  font-size: 16px;
+  width: 100%;
+  height: 48px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 0;
+  border: 1px solid rgba(148, 148, 148, 0.25);
+  box-shadow: none;
+  background-color: #ffffff;
+  color: #ccc;
+  padding-right: 50px;
+  outline: none;
+}
+.footer1 .footer .social .text {
+  position: relative;
+}
+
+.footer1 .footer .social .text i {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.footer1 .down1 {
+  background-color: rgb(241, 241, 241);
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.footer1 .down {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer1 .down .left {
+  color: rgba(0, 0, 0, 0.767);
+  font-size: 14px;
+}
+
+.footer1 .down .right li {
+  display: inline-flex;
+  margin-left: 20px;
+}
+.footer1 .down .right li a {
+  color: rgba(0, 0, 0, 0.767);
+  font-size: 14px;
+}
+
+@media (max-width: 1186px) {
+  .list1 .list {
+    width: 33.33%;
     margin-bottom: 15px;
+  }
 }
 
-.footer .up .content p {
-    font-size: 18p6;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.767);
+@media (max-width: 991px) {
+  .container {
+    width: 95%;
+    margin: 0px auto;
+  }
+  .header {
+    padding: 3px 0;
+  }
+  .header .menu {
+    display: none;
+  }
+  .header .menubar {
+    display: block;
+    margin-left: 50px;
+  }
+  .banner .content h1 {
+    font-size: 30px;
+  }
+  .list1 .list {
+    width: 33.33%;
+    margin-bottom: 15px;
+  }
+  .content1 .card {
+    width: 50%;
+    margin-bottom: 15px;
+  }
 }
-
-.footer .up .social {
-    margin-left: auto;
-}
-.footer .up .social ul li {
-    display: inline-block;
-    margin-bottom: 20px;
-}
-.footer .up .social ul li i {
-    color: rgb(2, 114, 2);
-    padding: 18px;
-    font-size: 18px;
-    background-color: rgb(235, 235, 235);
-    border-radius: 50%;
-    margin-left: 3px;
-}
-.footer .up .social .text input {
-    border: none;
-    margin-right: 20px;
+@media (max-width: 768px) {
+  .banner .content h1 {
+    font-size: 30px;
+  }
+  .banner3 {
+    margin: 30px 0;
+  }
+  .banner3 .hoverproduct a {
     font-size: 16px;
+    padding: 0 15px;
+  }
+  .banner3 .hoverproduct {
+    padding: 0 10px;
+  }
+  .quote {
+    margin: 60px 0 30px;
+    display: block;
+  }
+  .quote .left {
+    width: 100%;
+  }
+  .product .proright {
+    width: 100%;
+    margin-top: 15px;
+    padding-left: 0;
+  }
+  .product .proleft {
+    width: 100%;
+  }
+  .product .proright {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 15px;
+  }
+  .product .proright .up1 .right {
+    padding: 0 8px 15px;
+  }
+  .footer1 .down1 .down {
+    display: block;
+    text-align: center;
+  }
+  .footer1 .down1 .right {
+    justify-content: center;
+  }
+  .footer1 .down1 .right a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 575px) {
+  .banner .content {
+    display: none;
+    top: 50%;
+  }
+  .banner .content p {
+    font-size: 16px;
+  }
+  .banner .content h1 {
+    font-size: 16px;
+  }
+  .list1 .list {
+    width: 50%;
+    padding: 0px 15px;
+  }
+  .popular h1 {
+    font-size: 25px;
+  }
+  .popular .card {
+    width: 100%;
+    padding: 0px 5px;
+  }
+  .banner2 p {
+    width: 90%;
+  }
+  .service .card {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  .quote .right h3 {
+    font-size: 18px;
+  }
+  .quote .right p {
+    font-size: px;
+  }
 }
